@@ -1,0 +1,40 @@
+gpu_ids     : '0'
+num_workers : 2
+use_wandb   : False
+save_pic    : False
+resume      : False
+ckpt        : "./"
+
+loss_wgts   : [0.5,0.3,0.8,1.0]  
+score_wgts  : [1.0,0.0,0.0]
+single_b    : False 
+branch_opt  : -1
+
+split       : "AUROC"             
+dataset     : "cifar10"  
+plus_num    : 50   
+img_size    : 32                            
+cam_size    : 4                            
+num_known   : 6                            
+
+id_set      : "cifar10"     
+ood_set     : "LSUN_R"      
+
+epoch_num   : 150              
+batch_size  : 128              
+save_step   : 10               
+test_step   : 10               
+backbone    : "resnet18"  
+pretrained  : False     
+
+optimizer   : "SGD"      
+lr          : 0.1 
+gamma       : 0.1
+milestones  : [120]       
+momentum    : 0.9   
+weight_decay: 0.0001             
+
+temp        : 10
+bbox_thr    : 0.15  
+pre_trans    : RA          
+manual_ctr  : True
